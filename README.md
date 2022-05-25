@@ -25,7 +25,7 @@ Thế giới đối mặt với thảm họa chưa từng có với hàng loạt
 3/ Chức năng
 - Di chuyển, bắn đạn
 - Tính điểm
-https://www.youtube.com/watch?v=-Tu7zzY19ic
+- Video demo: https://www.youtube.com/watch?v=-Tu7zzY19ic
 
 4/ Các kỹ thuật
 - Sử dụng các hàm trong thư viện đồ họa SDL2
