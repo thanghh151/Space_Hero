@@ -33,8 +33,9 @@ Thế giới đối mặt với thảm họa chưa từng có với hàng loạt
 5/ Kết luận
 - Game tự code lại dựa trên kiến thức mình hiểu nên còn khá sơ khai và đơn giản.
 - Điểm tâm đắc: học được cách set up thư viện ngoài và chia tách file làm dự án trung bình.
-- Điểm chưa ưng ý: chưa giải quyết được các lỗi liên quan đến thư viện SDL2 mixer và ttf nên chưa tạo được âm thanh sinh động và nhiều chức năng khác cho game.![image](https://user-images.githubusercontent.com/100281796/170302413-5bc3b401-7a80-47a1-97e0-9fd069b1a763.png)
-![image](https://user-images.githubusercontent.com/100281796/170302582-8c1b9c6a-b411-4cc4-a826-d9c3612c59e8.png)
+- Điểm chưa ưng ý: chưa giải quyết được các lỗi liên quan đến thư viện SDL2 mixer và ttf nên chưa tạo được âm thanh sinh động và nhiều chức năng khác cho game.
+![image](https://user-images.githubusercontent.com/100281796/170302582-8c1b9c6a-b411-4cc4-a826-d9c3612c59e8.png)![image](https://user-images.githubusercontent.com/100281796/170304670-ece9980f-3112-4218-ac59-2085f0744f63.png)
+
 - Hướng phát triển: nghiên cứu tìm ra nguyên nhân để giải quyết vấn đề trên để xây dựng thêm nhiều tính năng như: menu chọn độ khó, lưu lại điểm cao,... Ngoài ra tạo ra thêm nhiều đối tượng đạn bắn và thiên thạch cho game thêm sinh động. Tạo hiếu ứng thiên thạch to vỡ ra nhiều mảnh nhỏ để yêu cầu phá hủy (độ khó cao hơn).
 - Tự đánh giá: 7-8 điểm.
 
