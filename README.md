@@ -29,6 +29,7 @@ Thế giới đối mặt với thảm họa chưa từng có với hàng loạt
 
 4/ Các kỹ thuật
 - Sử dụng các hàm trong thư viện đồ họa SDL2
+- Thao tác phím
 - Kỹ thuật lập trình cơ bản: mảng, lớp, random, con trỏ,...
 
 5/ Kết luận
