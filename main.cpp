@@ -16,7 +16,7 @@ class bullet
         void destroy();
         SDL_Rect bullet;
 
-    private:
+    	private:
         int xpos , ypos;
 
 };
@@ -37,7 +37,7 @@ void bullet::render()
 	g_bullet_tex = SDL_CreateTextureFromSurface(g_renderer, g_bullet_img);
 	SDL_FreeSurface(g_bullet_img);
 	if(g_bullet_tex == NULL)
-    {
+   	{
 		SDL_GetError();
 		SDL_DestroyRenderer(g_renderer);
 		SDL_DestroyWindow(g_window);
@@ -50,26 +50,26 @@ void bullet::render()
 int random_threats(int x, int rand ,SDL_Rect p , bullet B[])
 {
 	if(rand==2)
-    {
+    	{
 		multiply[x]=1;
-	    pos[x].x = x;
+	    	pos[x].x = x;
 	}
 	for(int i = 0; i < (SCREEN_WIDTH-50); i++)
 	{
 		if(multiply[i] == 1)
         {
 			SDL_RenderCopy(g_renderer, g_threat_tex, NULL, &pos[i]);
-	    	pos[i].y+=2.5;
+	    		pos[i].y+=2.5;
 
 	    //threats gone
 	    if(pos[i].y >= SCREEN_HEIGHT)
-        {
+            {
 	       multiply[i] = 0;
 	       pos[i].y = 0;
 	       lives--;
 	    }
 	    if(p.y >= (pos[i].y-p.h) && p.y <= (pos[i].y + pos[i].h))
-        {
+            {
             if(p.x <= (pos[i].x + pos[i].w) && p.x >= pos[i].x)
             {
                 multiply[i] = 0;
@@ -96,7 +96,6 @@ int random_threats(int x, int rand ,SDL_Rect p , bullet B[])
                 multiply[i] = 0;
                 pos[i].y = 0;
                 lives--;
-                cout << "Life : " << lives << endl;
             }
 	    }
 	    for(int j = 0; j < NUM_BULLETS; j++)
@@ -149,7 +148,7 @@ int main(int argc, char* argv[])
     int currentscore;
 	//multiply threats randomly
 	for(int i = 0; i < (SCREEN_WIDTH - 50); i++)
-    {
+        {
 		pos[i].w=50;
 		pos[i].h=60;
 	}
@@ -162,12 +161,12 @@ int main(int argc, char* argv[])
 
 	//creating a Window
 	g_window = SDL_CreateWindow("UET-Game",
-							   SDL_WINDOWPOS_CENTERED,
-							   SDL_WINDOWPOS_CENTERED,
-							   SCREEN_WIDTH, SCREEN_HEIGHT,
-							   SDL_WINDOW_RESIZABLE);
+				    SDL_WINDOWPOS_CENTERED,
+				    SDL_WINDOWPOS_CENTERED,
+				    SCREEN_WIDTH, SCREEN_HEIGHT,
+				    SDL_WINDOW_RESIZABLE);
 	if(g_window == NULL)
-    {
+    	{
 		SDL_Quit();
 		return 1;
 	}
@@ -176,7 +175,7 @@ int main(int argc, char* argv[])
 	Uint32 render_flags = SDL_RENDERER_ACCELERATED;
 	g_renderer = SDL_CreateRenderer(g_window, -1, render_flags);
 	if(g_renderer == NULL)
-    {
+    	{
 		SDL_DestroyWindow(g_window);
 		SDL_Quit();
 		return 1;
@@ -187,9 +186,9 @@ int main(int argc, char* argv[])
 	SDL_Delay(1500);
 	Uint32 starting_tick;
 
-    g_background = SDL_LoadBMP("img/background.bmp");
+    	g_background = SDL_LoadBMP("img/background.bmp");
 	if(g_background == NULL)
-    {
+    	{
 		SDL_DestroyRenderer(g_renderer);
 		SDL_DestroyWindow(g_window);
 		SDL_Quit();
@@ -199,7 +198,7 @@ int main(int argc, char* argv[])
 	g_background_tex = SDL_CreateTextureFromSurface(g_renderer, g_background);
 	SDL_FreeSurface(g_background);
 	if(g_background_tex == NULL)
-    {
+    	{
 		SDL_DestroyRenderer(g_renderer);
 		SDL_DestroyWindow(g_window);
 		SDL_Quit();
@@ -207,7 +206,7 @@ int main(int argc, char* argv[])
 	}
 
 	//loading player
-    g_player = SDL_LoadBMP("img/player.bmp");
+    	g_player = SDL_LoadBMP("img/player.bmp");
 	if(g_player == NULL)
 	{
 		SDL_DestroyRenderer(g_renderer);
@@ -219,7 +218,7 @@ int main(int argc, char* argv[])
 	g_player_tex = SDL_CreateTextureFromSurface(g_renderer, g_player);
 	SDL_FreeSurface(g_player);
 	if(g_player_tex == NULL)
-    {
+    	{
 		SDL_DestroyRenderer(g_renderer);
 		SDL_DestroyWindow(g_window);
 		SDL_Quit();
@@ -229,7 +228,7 @@ int main(int argc, char* argv[])
 	//loading threats
 	g_threat = SDL_LoadBMP("img/threat.bmp");
 	if(g_threat == NULL)
-    {
+    	{
 		SDL_DestroyRenderer(g_renderer);
 		SDL_DestroyWindow(g_window);
 		SDL_Quit();
@@ -239,7 +238,7 @@ int main(int argc, char* argv[])
 	g_threat_tex = SDL_CreateTextureFromSurface(g_renderer, g_threat);
 	SDL_FreeSurface(g_threat);
 	if(g_threat_tex == NULL)
-    {
+    	{
 		SDL_DestroyRenderer(g_renderer);
 		SDL_DestroyWindow(g_window);
 		SDL_Quit();
